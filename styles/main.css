@@ -1,3 +1,135 @@
-h1{
-    color: red;
+body,html{
+    height: 100%;
+    font-size: 12px;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    display: grid;
+    grid-template-rows: 100px 1fr 50px;
+    grid-template-areas: "nav"
+                         "main"
+                         "footer";
+}
+nav{
+    grid-area: "nav";
+}
+nav ul{
+    float: right;
+    display: flex;
+    margin-top: 20px;
+}
+nav li{
+    margin: 0 10px;
+    display: block;
+}
+nav li a{
+    text-decoration: none;
+    color: #272727;
+    font-size: 13px;
+}
+nav ul li:nth-child(1):hover a,
+nav ul li:nth-child(2):hover a{
+    text-decoration: underline;
+    opacity: .85;
+}
+nav ul li:nth-child(3) a{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/menu.png);
+    background-size: 30px 30px;
+    position: relative;
+    bottom: 5px;
+}
+nav ul li:nth-child(4) a{
+    display: block;
+    background-color: #4584ef;
+    color: white;
+    padding: 8px 13px;
+    font-weight: bold;
+    position: relative;
+    bottom: 5px;
+}
+nav ul li:nth-child(4) a:active{
+    background: -webkit-linear-gradient(top,#3c7ae4,#3f76d3);
+    box-shadow: inset 0 2px 0 rgba(0,0,0,.15);
+}
+main{
+    grid-area: "main";
+}
+main .logo{
+    width: 272px;
+    height: 92px;
+    margin: 100px auto 30px auto;
+}
+main img{
+    width: 100%;
+    height: 100%;
+}
+main .search-input{
+    width: 550px;
+    margin: 0 auto 30px auto;
+}
+main .search-input input{
+    -webkit-appearance: none;
+    appearance: none;
+    font-size: inherit;
+    font-family: inherit;
+    display: block;
+    width: 100%;
+    height: 42px;
+    padding: 0 40px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+main .google-button{
+    display: flex;
+    justify-content: center;
+}
+main .google-button button{
+    font-size: inherit;
+    font-family: inherit;
+    border: none;
+    border-radius: 3px;
+    background-color: #f3f3f3;
+    color: #5f6368;
+    padding:10px 15px;
+    margin: 0px 5px;
+}
+main .google-button button:hover{
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    background-color: #f8f8f8;
+    color: #222;
+    border: 1px solid #c6c6c6;
+
+}
+input:focus,button:focus{
+    outline: none;
+}
+footer{
+    grid-area: "footer";
+    background-color: #f2f2f2;
+    overflow: auto;
+    margin-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+footer .right{
+    float: right;
+}
+footer .left{
+    float: left;
+}
+footer ul li{
+    display: inline;
+}
+footer ul a{
+    display: inline-block;
+    text-decoration: none;
+    color: #5f6368;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+footer ul li a:hover{
+    text-decoration: underline;
 }
